@@ -1,0 +1,108 @@
+/**
+ * Project: Project name 
+ * File:    Main SCSS
+ */
+
+
+
+@import 'bower_components/pasteup-palette/src/_palette';
+@import 'bower_components/guss-webfonts/src/_webfonts.scss';
+@import 'bower_components/guss-typography/_typography.scss';
+
+@import 'modules/fonts';
+
+@include guss-typography-defaults;
+
+@mixin border-box {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+figure, body {
+	margin: 0;
+}
+
+p {
+	@include fs-bodyCopy(2);
+}
+
+.guInteractive {
+    //color: map-get($pasteup-palette, 'guardian-brand');
+    background: #f9f8f2;
+    @include border-box;
+    padding: 15px;
+    max-width: 860px;
+
+}
+
+.topics {
+	width: 100%;
+	
+
+	.topic {
+		font-family: $f-sans-serif-text;
+		font-size: 14px;
+		background: #fff;
+		margin-bottom: 2px;
+		line-height: 1.75em;
+		padding: 0 5px;
+		@include border-box;
+	}
+}
+
+
+.guHeader {
+	@include border-box;
+
+	h1{
+		font-family: $f-serif-headline;
+		font-size: get-font-size(headline, 5);
+		margin: 0;
+	}
+
+	.guSubHead {
+		@include fs-bodyCopy(2);
+		margin: 0;
+	}
+	
+
+}
+
+@media (min-width: 620px) {
+	.guHeader {
+		padding-left: 120px;
+	}
+
+	.guContent{
+		display: table;
+		padding-top: 20px;
+
+		.colA {
+			display: table-cell;
+			width: 120px;
+			margin-right: 15px;
+		}
+
+		.colB {
+			display: table-cell;
+			max-width: 800px;
+		}
+	}
+
+}
+
+@media (min-width: 860px) {
+	.guHeader {
+		padding-left: 220px;
+	}
+
+	.guContent{
+		display: table;
+
+		.colA {
+			width: 200px;
+			padding-right: 20px;
+		}
+	}
+}
