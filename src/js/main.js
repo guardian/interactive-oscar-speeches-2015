@@ -33,6 +33,7 @@ define([
     function renderInteractive(data){
         console.log(data)
 
+
         var baseTemplate = new Ractive({
             el: div,
             template: appTemplate,
@@ -42,7 +43,11 @@ define([
             },
             data: {
                 winners: data.sheets.Sheet1,
-                topics: data.sheets.Sheet2
+                topics: data.sheets.Sheet2,
+                isSelected: function(e,f){
+                    if(!e[f]) return;
+                    return 'active'
+                }
             }
 
         })
@@ -50,6 +55,9 @@ define([
         // window.onresize = function(event) {
         //     //baseTemplate.set('width', documen)
         // };
+        baseTemplate.on('highlightCategory',function(i){
+            console.log('hoi');
+        })
 
 
     }
