@@ -5,13 +5,13 @@
 
 
 
-@import 'bower_components/pasteup-palette/src/_palette';
-@import 'bower_components/guss-webfonts/src/_webfonts.scss';
-@import 'bower_components/guss-typography/_typography.scss';
+// @import 'bower_components/pasteup-palette/src/_palette';
+// @import 'bower_components/guss-webfonts/src/_webfonts.scss';
+// @import 'bower_components/guss-typography/_typography.scss';
 
 @import 'modules/fonts';
 
-@include guss-typography-defaults;
+// @include guss-typography-defaults;
 
 @mixin border-box {
 	-webkit-box-sizing: border-box;
@@ -24,7 +24,7 @@ figure, body {
 }
 
 p {
-	@include fs-bodyCopy(2);
+	// @include fs-bodyCopy(2);
 }
 
 .guInteractive {
@@ -33,6 +33,8 @@ p {
     @include border-box;
     padding: 15px;
     max-width: 860px;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Guardian Egyptian Web', Georgia;
     *{
     	box-sizing:border-box;
     }
@@ -43,13 +45,13 @@ p {
 	
 
 	.topic {
-		font-family: $f-sans-serif-text;
+		// font-family: $f-sans-serif-text;
 		font-size: 14px;
 		background: #fff;
 		margin-bottom: 2px;
 		line-height: 1.75em;
 		padding: 0 5px;
-		@include border-box;
+		// @include border-box;
 	}
 }
 
@@ -58,13 +60,15 @@ p {
 	@include border-box;
 
 	h1{
-		font-family: $f-serif-headline;
+		font-family: 'Guardian Egyptian Web', Georgia;
 		font-size: get-font-size(headline, 5);
-		margin: 0;
+		margin: 0 0 10px 0;
+		line-height:1.1em;
+
 	}
 
 	.guSubHead {
-		@include fs-bodyCopy(2);
+		// @include fs-bodyCopy(2);
 		margin: 0;
 	}
 }
@@ -88,7 +92,8 @@ p {
 		margin-right:0;
 	}
 	h2{
-		font-family: $f-sans-serif-text;
+		// font-family: $f-sans-serif-text;
+		font-family: 'Guardian Text Sans Web', Arial;
 		font-size:12px;
 		color:#ddd;
 		margin:0;
@@ -96,7 +101,7 @@ p {
 		font-weight:normal;
 	}
 	h3{
-		font-family: $f-serif-headline;
+		// font-family: $f-serif-headline;
 		margin:0;
 		font-size:14px;
 		font-weight:bold;
@@ -108,9 +113,12 @@ p {
 	color:#ccc;
 	padding:4px 5px;
 	font-size:12px;
-	font-family: $f-sans-serif-text;
+	// font-family: $f-sans-serif-text;
 	margin-bottom:1px;
 	line-height:1.1em;
+	font-family: 'Guardian Text Sans Web', Arial;
+	background:#fff;
+	// height:10px;
 	&.active{
 		background:#ffbb00;
 		color:#333;
