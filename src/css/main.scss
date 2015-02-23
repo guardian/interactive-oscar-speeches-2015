@@ -21,6 +21,8 @@
 
 figure, body {
 	margin: 0;
+	padding-bottom: 10px;
+	overflow: hidden;
 }
 
 p {
@@ -28,6 +30,7 @@ p {
 }
 
 .guInteractive {
+
     //color: map-get($pasteup-palette, 'guardian-brand');
     background: #f9f8f2;
     @include border-box;
@@ -61,7 +64,7 @@ p {
 	margin-bottom:20px;
 	h1{
 		font-family: 'Guardian Egyptian Web', Georgia;
-		font-size: get-font-size(headline, 5);
+		font-size: get-font-size(headline, 4);
 		margin: 0 0 10px 0;
 		line-height:1.1em;
 
@@ -139,9 +142,10 @@ p {
 }
 .speech{
 	width:48%;
+	overflow: hidden;
 	float:left;
 	margin-bottom:40px;
-	margin-right:4%;
+	margin-right:2%;
 	.winner{
 		border-bottom:2px solid #ddd;
 		padding-bottom:5px;
@@ -151,6 +155,7 @@ p {
 	}
 	.winnerInfo{
 		padding-right:50px;
+		min-height: 55px;
 	}
 	.winnerPhoto{
 		width:40px;
@@ -300,6 +305,11 @@ p {
 		&:nth-of-type(4n+4){
 			// width:193px;
 			margin-right:0;
+		}
+
+		.winnerInfo{
+			padding-right:50px;
+			min-height: 50px;
 		}
 	}
 	.guHeader {
