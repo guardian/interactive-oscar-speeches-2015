@@ -31,7 +31,7 @@ p {
     //color: map-get($pasteup-palette, 'guardian-brand');
     background: #f9f8f2;
     @include border-box;
-    padding: 10px;
+    padding: 10px 10px 0 10px;
     max-width: 860px;
     -webkit-font-smoothing: antialiased;
     font-family: 'Guardian Egyptian Web', Georgia;
@@ -58,7 +58,7 @@ p {
 
 .guHeader {
 	@include border-box;
-	margin-bottom:40px;
+	margin-bottom:20px;
 	h1{
 		font-family: 'Guardian Egyptian Web', Georgia;
 		font-size: get-font-size(headline, 5);
@@ -68,6 +68,7 @@ p {
 	}
 
 	.guSubHead {
+			max-width: 400px;
 		margin: 0;
 		line-height:1.5em;
 		.styleHighlight{
