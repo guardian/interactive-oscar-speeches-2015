@@ -32,12 +32,12 @@ p {
 .guInteractive {
 
     //color: map-get($pasteup-palette, 'guardian-brand');
-    background: #f9f8f2;
+    background: #eaeaea;
     @include border-box;
-    padding: 10px 10px 0 10px;
+    padding: 20px 10px 0 10px;
     max-width: 860px;
     -webkit-font-smoothing: antialiased;
-    font-family: 'Guardian Egyptian Web', Georgia;
+    font-family: 'Guardian Text Egyptian Web', Georgia;
     *{
     	box-sizing:border-box;
     }
@@ -64,9 +64,10 @@ p {
 	margin-bottom:20px;
 	h1{
 		font-family: 'Guardian Egyptian Web', Georgia;
-		font-size: get-font-size(headline, 4);
+		font-size: get-font-size(headline, 3);
 		margin: 0 0 10px 0;
 		line-height:1.1em;
+		color: #333;
 
 	}
 
