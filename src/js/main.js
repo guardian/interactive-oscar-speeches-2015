@@ -48,7 +48,8 @@ define([
                     if(!e[f]) return;
                     return 'active'
                 },
-                highlight:''
+                highlight:'',
+                expanded: ''
 
             }
 
@@ -62,6 +63,9 @@ define([
 
         baseTemplate.on('highlightStyle',function(e,style){
             baseTemplate.set('highlight',style);
+        })
+        baseTemplate.on('revealWinners',function(e,style){
+            baseTemplate.set('expanded','expanded');
         })
 
 
