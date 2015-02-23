@@ -31,7 +31,7 @@ define([
     }
 
     function renderInteractive(data){
-        console.log(data)
+ 
 
 
         var baseTemplate = new Ractive({

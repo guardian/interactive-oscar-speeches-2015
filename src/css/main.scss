@@ -155,7 +155,7 @@ p {
 		margin-bottom:5px;
 	}
 	.winnerInfo{
-		padding-right:50px;
+		//padding-right:50px;
 		min-height: 55px;
 	}
 	.winnerPhoto{
@@ -169,6 +169,7 @@ p {
 		position:absolute;
 		top:0;
 		right:0;
+		display: none;
 	}
 	&:nth-of-type(2n+2){
 		margin-right:0;
@@ -264,6 +265,13 @@ p {
 		}
 		&:nth-of-type(3n+3){
 			margin-right:0;
+		}
+		.winnerInfo{
+			padding-right:50px;
+
+		}
+		.winnerPhoto{
+			display: block;
 		}
 	}
 }
