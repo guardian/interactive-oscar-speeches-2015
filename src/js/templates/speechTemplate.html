@@ -1,12 +1,15 @@
 {{#winners:num}}
 <div class="speech">
 	<div class='winner'>
-		<h2>{{award}}</h2>
-		<h3>{{winner}}</h3>
+		<div class="winnerInfo">
+			<h2>{{award}}</h2>
+			<h3>{{winner}}</h3>
+		</div>
+		<div class="winnerPhoto" style="background-image:url(assets/imgs/{{id}}.jpg);"></div>
 	</div>
 	<div class="speechCategories">
 		{{#topics}}
-			<div class="speechCategory {{isSelected(winners[num],category)}} {{style}}"  on-mouseover="hoverCategory">{{label}}</div>
+			<div class="speechCategory {{isSelected(winners[num],category)}} winner-{{style}}"  on-mouseover="hoverCategory">{{label}}</div>
 		{{/topics}}
 	</div>
 </div>

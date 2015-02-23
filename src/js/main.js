@@ -47,7 +47,9 @@ define([
                 isSelected: function(e,f){
                     if(!e[f]) return;
                     return 'active'
-                }
+                },
+                highlight:''
+
             }
 
         })
@@ -55,8 +57,11 @@ define([
         // window.onresize = function(event) {
         //     //baseTemplate.set('width', documen)
         // };
-        baseTemplate.on('highlightCategory',function(i){
-            console.log('hoi');
+        baseTemplate.on('speeches.hoverCategory',function(i){
+        })
+
+        baseTemplate.on('highlightStyle',function(e,style){
+            baseTemplate.set('highlight',style);
         })
 
 

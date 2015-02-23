@@ -5,9 +5,9 @@
 
 
 
-// @import 'bower_components/pasteup-palette/src/_palette';
+@import 'bower_components/pasteup-palette/src/_palette';
 // @import 'bower_components/guss-webfonts/src/_webfonts.scss';
-// @import 'bower_components/guss-typography/_typography.scss';
+@import 'bower_components/guss-typography/_typography.scss';
 
 @import 'modules/fonts';
 
@@ -31,7 +31,7 @@ p {
     //color: map-get($pasteup-palette, 'guardian-brand');
     background: #f9f8f2;
     @include border-box;
-    padding: 15px;
+    padding: 10px;
     max-width: 860px;
     -webkit-font-smoothing: antialiased;
     font-family: 'Guardian Egyptian Web', Georgia;
@@ -58,7 +58,7 @@ p {
 
 .guHeader {
 	@include border-box;
-
+	margin-bottom:40px;
 	h1{
 		font-family: 'Guardian Egyptian Web', Georgia;
 		font-size: get-font-size(headline, 5);
@@ -68,8 +68,20 @@ p {
 	}
 
 	.guSubHead {
-		// @include fs-bodyCopy(2);
 		margin: 0;
+		line-height:1.5em;
+		.styleHighlight{
+			background: #7d7569;
+			color: #fff;
+			font-family: Guardian Text Sans Web;
+			border-radius: 20px;
+			display: inline-block;
+			padding: 5px 8px;
+			cursor: pointer;
+			font-size: 14px;
+			line-height: 1em;
+			margin: 0 2px;
+		}
 	}
 }
 #winners{
@@ -79,49 +91,101 @@ p {
 		content:'';
 		display:block;
 	}
+	&.business .winner-business,&.delivery .winner-delivery,&.personal .winner-personal{
+		color:#333;
+		background:rgba(0,0,0,0.04);
+		&.active{
+			color:#333;
+		}
+	}
+	
 }
 .speech{
-	width:49%;
+	width:48%;
 	float:left;
 	margin-bottom:40px;
-	margin-right:2%;
+	margin-right:4%;
 	.winner{
 		border-bottom:2px solid #ddd;
+		padding-bottom:5px;
+		min-height:46px;
+		position: relative;
+		margin-bottom:5px;
+	}
+	.winnerInfo{
+		padding-right:50px;
+	}
+	.winnerPhoto{
+		width:40px;
+		height:40px;
+		background-image:url(../imgs/bestpicture.jpg);
+		background-size:cover;
+		background-repeat: no-repeat;
+		background-position:center;
+		border-radius:50px;
+		position:absolute;
+		top:0;
+		right:0;
 	}
 	&:nth-of-type(2n+2){
 		margin-right:0;
 	}
 	h2{
-		// font-family: $f-sans-serif-text;
 		font-family: 'Guardian Text Sans Web', Arial;
 		font-size:12px;
-		color:#ddd;
-		margin:0;
-		line-height:1.1em;
+		color:#aaa;
+		margin:0 0 4px;
+		line-height:1em;
 		font-weight:normal;
 	}
 	h3{
-		// font-family: $f-serif-headline;
+		margin-bottom:12px;
 		margin:0;
 		font-size:14px;
 		font-weight:bold;
+	}
+	&:nth-of-type(1){
+		.speechCategory{
+			color:#888;
+			&.active{
+				color:#333;
+			}
+		}
 	}
 }
 
 .speechCategory{
 	width:100%;
-	color:#ccc;
-	padding:4px 5px;
+	color:#eee;
+	padding:4px 5px 4px 25px;
 	font-size:12px;
-	// font-family: $f-sans-serif-text;
-	margin-bottom:1px;
-	line-height:1.1em;
+	border-bottom:1px solid transparent;
+	line-height:1em;
 	font-family: 'Guardian Text Sans Web', Arial;
-	background:#fff;
-	// height:10px;
+	transition:all 0.5s;
+	position:relative;
+	&:before{
+		position: absolute;
+		content:'';
+		height:20px;
+		width:20px;
+		left:0;
+		top:0;
+		background-image:url(../imgs/cross.svg);
+		background-repeat:no-repeat;
+		background-position:center;
+	}
+	&:nth-of-type(3),&:nth-of-type(6){
+		// margin-bottom:15px;
+	}
 	&.active{
-		background:#ffbb00;
 		color:#333;
+		&:before{
+			background-image:url(../imgs/tick.svg);
+			background-color:#ffbb00;
+			border-radius:20px;
+		}
+		
 	}
 }
 
@@ -145,7 +209,6 @@ p {
 
 	.guContent{
 		display: table;
-		padding-top: 20px;
 
 		.colA {
 			display: table-cell;
@@ -162,16 +225,36 @@ p {
 }
 
 @media (min-width: 860px) {
+	.speech{
+		width:180px;
+		margin-right:20px;
+		&:nth-of-type(4n+1){
+			margin-left:30px;
+		}
+
+		&:nth-of-type(4n+2),&:nth-of-type(4n+3){
+			// width:193px;
+			margin-right:20px;
+		}
+		
+		&:nth-of-type(4n+4){
+			// width:193px;
+			margin-right:0;
+		}
+	}
 	.guHeader {
-		padding-left: 220px;
+		padding-left: 230px;
 	}
 
 	.guContent{
 		display: table;
 
 		.colA {
-			width: 220px;
-			padding-right: 20px;
+			width: 0;
+			padding-right: 0;
+		}
+		.colB{
+			max-width:none;
 		}
 	}
 }
